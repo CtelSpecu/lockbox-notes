@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 210 30% 98%;
+    --foreground: 210 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 20% 15%;
+
+    --primary: 195 85% 45%;
+    --primary-foreground: 0 0% 100%;
+    
+    --lab-blue: 195 85% 45%;
+    --lab-teal: 180 70% 50%;
+    --lab-amber: 38 92% 55%;
+    --encrypted: 280 80% 60%;
+    
+    --secondary: 210 25% 92%;
+    --secondary-foreground: 210 20% 15%;
+
+    --muted: 210 20% 95%;
+    --muted-foreground: 210 15% 45%;
+
+    --accent: 195 85% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 20% 88%;
+    --input: 210 20% 90%;
+    --ring: 195 85% 45%;
+
+    --radius: 0.75rem;
+    
+    --gradient-lab: linear-gradient(135deg, hsl(195 85% 45%), hsl(180 70% 50%));
+    --gradient-encrypted: linear-gradient(135deg, hsl(280 80% 60%), hsl(260 85% 55%));
+    --shadow-lab: 0 4px 20px -4px hsl(195 85% 45% / 0.15);
+    --shadow-card: 0 2px 12px -2px hsl(210 20% 15% / 0.08);
+    
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 210 25% 8%;
+    --foreground: 210 20% 92%;
+
+    --card: 210 22% 12%;
+    --card-foreground: 210 20% 92%;
+
+    --popover: 210 22% 12%;
+    --popover-foreground: 210 20% 92%;
+
+    --primary: 195 85% 55%;
+    --primary-foreground: 210 25% 8%;
+    
+    --lab-blue: 195 85% 55%;
+    --lab-teal: 180 70% 60%;
+    --lab-amber: 38 92% 60%;
+    --encrypted: 280 80% 65%;
+
+    --secondary: 210 20% 18%;
+    --secondary-foreground: 210 20% 92%;
+
+    --muted: 210 20% 16%;
+    --muted-foreground: 210 15% 60%;
+
+    --accent: 195 85% 55%;
+    --accent-foreground: 210 25% 8%;
+
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 20% 20%;
+    --input: 210 20% 18%;
+    --ring: 195 85% 55%;
+    
+    --gradient-lab: linear-gradient(135deg, hsl(195 85% 55%), hsl(180 70% 60%));
+    --gradient-encrypted: linear-gradient(135deg, hsl(280 80% 65%), hsl(260 85% 60%));
+    --shadow-lab: 0 4px 20px -4px hsl(195 85% 55% / 0.25);
+    --shadow-card: 0 2px 12px -2px hsl(0 0% 0% / 0.3);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}

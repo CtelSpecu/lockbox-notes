@@ -111,6 +111,7 @@ export function ExperimentStep({
                 variant="ghost"
                 onClick={() => onToggleEncryption(id)}
                 className="h-8 w-8 p-0"
+                title={isEncrypted ? "Decrypt (requires signature)" : "Encrypt (requires signature)"}
               >
                 <span className="sr-only">Toggle encryption</span>
                 {isEncrypted ? '🔓' : '🔒'}

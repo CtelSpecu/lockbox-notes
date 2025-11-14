@@ -2,16 +2,10 @@ import { DeployFunction } from "hardhat-deploy/types";
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 
 const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
-  const { deployer } = await hre.getNamedAccounts();
-  const { deploy } = hre.deployments;
-
-  const deployedFHECounter = await deploy("FHECounter", {
-    from: deployer,
-    log: true,
-  });
-
-  console.log(`FHECounter contract: `, deployedFHECounter.address);
+  // This file is kept for compatibility but does nothing
+  // All deployments are now in numbered deploy scripts (e.g., 02_deploy_ExperimentLog.ts)
+  console.log("Skipping deploy.ts - using numbered deployment scripts instead");
 };
+
 export default func;
-func.id = "deploy_fheCounter"; // id required to prevent reexecution
-func.tags = ["FHECounter"];
+func.tags = ["legacy"];

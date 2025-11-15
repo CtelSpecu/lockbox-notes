@@ -137,8 +137,8 @@ export const useExperimentLog = (parameters: {
       try {
         const isStale = () =>
           thisAddress !== experimentLogRef.current?.address ||
-          !sameChain.current(thisChainId) ||
-          !sameSigner.current(thisSigner);
+          !sameChain.current?.(thisChainId) ||
+          !sameSigner.current?.(thisSigner);
 
         const contract = new ethers.Contract(
           thisAddress,
@@ -202,8 +202,8 @@ export const useExperimentLog = (parameters: {
       try {
         const isStale = () =>
           thisAddress !== experimentLogRef.current?.address ||
-          !sameChain.current(thisChainId) ||
-          !sameSigner.current(thisSigner);
+          !sameChain.current?.(thisChainId) ||
+          !sameSigner.current?.(thisSigner);
 
         const contract = new ethers.Contract(
           thisAddress,
@@ -272,8 +272,8 @@ export const useExperimentLog = (parameters: {
       try {
         const isStale = () =>
           thisAddress !== experimentLogRef.current?.address ||
-          !sameChain.current(thisChainId) ||
-          !sameSigner.current(thisSigner);
+          !sameChain.current?.(thisChainId) ||
+          !sameSigner.current?.(thisSigner);
 
         const contract = new ethers.Contract(
           thisAddress,
@@ -324,8 +324,8 @@ export const useExperimentLog = (parameters: {
       try {
         const isStale = () =>
           thisAddress !== experimentLogRef.current?.address ||
-          !sameChain.current(thisChainId) ||
-          !sameSigner.current(thisSigner);
+          !sameChain.current?.(thisChainId) ||
+          !sameSigner.current?.(thisSigner);
 
         const contract = new ethers.Contract(
           thisAddress,
